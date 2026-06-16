@@ -96,7 +96,7 @@ class HolderAgent(
                     issuerSigned = validated.issuerSigned,
                     scheme = credential.scheme,
                     renewalInfo = renewalInfo,
-                    issuer = credential.issuerSigned.issuerAuth.protectedHeader.certificateChain?.getOrNull(0)
+                    issuer = credential.issuerSigned.issuerAuth.unprotectedHeader?.certificateChain?.getOrNull(0)
                 )
             }
         }
